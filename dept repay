@@ -1,0 +1,37 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int principal, rate, years;
+    float interest, amount, discount, final_amount;
+
+    // Read input: principal, rate of interest, and time
+    scanf("%d", &principal);
+    scanf("%d", &rate);
+    scanf("%d", &years);
+
+    // Calculate interest
+    interest = (principal * rate * years) / 100.0;
+
+    // Calculate total amount to be paid
+    amount = principal + interest;
+
+    // Calculate discount (2% of interest)
+    discount = interest * 0.02;
+
+    // Final amount after discount
+    final_amount = amount - discount;
+
+    // Print results with two decimal places
+    printf("%.2f\n", interest);
+    printf("%.2f\n", amount);
+    printf("%.2f\n", discount);
+    printf("%.2f\n", final_amount);
+
+    return 0;
+}
