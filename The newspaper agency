@@ -1,0 +1,28 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int w, x, y;
+
+    // Read input values
+    scanf("%d", &w); // Number of copies sold
+    scanf("%d", &x); // Selling price per copy
+    scanf("%d", &y); // Cost price per copy
+
+    // Fixed cost per Sunday
+    int fixed_cost = 100;
+
+    // Calculate profit
+    int profit = (w * (x - y)) - fixed_cost;
+
+    // Output the profit
+    printf("%d\n", profit);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
